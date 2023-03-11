@@ -20,4 +20,9 @@ export class AuthController {
     session.authenticated = true;
     return session;
   }
+
+  @Post('register')
+  register() {
+    return 'register';
+  }
 }
