@@ -14,3 +14,5 @@ export class SerializedUser {
     Object.assign(this, partial);
   }
 }
+
+// user.response.dto

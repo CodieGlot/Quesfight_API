@@ -14,3 +14,5 @@ export class User {
   @Column()
   password: string;
 }
+
+// user.entity.ts

@@ -23,6 +23,13 @@ export class UsersService {
       (await this.usersRepository.findOneBy({ email: createUserDto.email }))
     )
       return null;
+      // 19 => 25: code chưa clean
+      // sau khi e fix comment dòng 39 xong có thể sử dụng
+      // const existUser = await this.findUserByEmailOrUserName(createUserDto);
+
+      // if (existUser) {
+        // return ConflictException
+      //}
 
     createUserDto.password = await hashPassword(createUserDto.password);
 
@@ -34,6 +41,7 @@ export class UsersService {
     return await this.usersRepository.findOneBy({ id: id });
   }
 
+  // có thể viết 1 function gộp cả 2 function này lại, sử dụng createQueryBuilder
   async findUserByUsername(username: string) {
     return await this.usersRepository.findOneBy({ username: username });
   }

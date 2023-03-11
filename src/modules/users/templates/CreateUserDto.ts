@@ -13,3 +13,8 @@ export class CreateUserDto {
   @MinLength(8)
   password: string;
 }
+
+// move class này sang folder khác
+// dto/request
+// đổi tên file createUser.dto.ts
+
