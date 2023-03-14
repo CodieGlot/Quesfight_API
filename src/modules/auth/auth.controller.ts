@@ -23,6 +23,6 @@ export class AuthController {
 
   @Post('register')
   register() {
-    return 'register';
+    return 'register2'; // thien fix cai
   }
 }
